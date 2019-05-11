@@ -1,4 +1,5 @@
 # Base packages:
+cryptography==2.5
 # Flask
 # gunicorn
 click==6.7
