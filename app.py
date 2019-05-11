@@ -12,7 +12,7 @@ from base64 import b64decode,b64encode
 @app.route('/')
 def helloworld():
     return "Helloworld"
-"""
+
 def encrypt(message, pub_key):
     cipher = PKCS1_OAEP.new(pub_key)
     return cipher.encrypt(message)
@@ -83,4 +83,3 @@ decrypted = decrypt(b64decode(encrypted), keyPriv)
 
 print(encrypted)
 print(decrypted)
-"""
