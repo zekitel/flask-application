@@ -1,10 +1,12 @@
-"""
+
+
+from flask import Flask,request
+app = Flask(__name__)
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 from base64 import b64decode,b64encode
-"""
-from flask import Flask,request
-app = Flask(__name__)
+
+
 
 @app.route('/')
 def helloworld():
@@ -52,8 +54,8 @@ def decryption():
     decrypted = decrypt(b64decode(message), keyPriv)
     return decrypted
 
-"""
-"""
+
+
 pubkey = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCuGKtS8Yt1zgsT9s6OyGz3IqVrNncCsO4YBJqLbzoKcLdXZhRa/L53PaVWt4cdwPayTx5RnNmWN2DtjFI84yMTRwijKEResAeiloYFd1ha0IhQJtAqu26wXLI1Oz1HxQkHx/Rimd5JWiahYevssOcNHKNM9Y0Oj6OqmPcj2TY/0wIDAQAB'
 privateKey='MIICXQIBAAKBgQCuGKtS8Yt1zgsT9s6OyGz3IqVrNncCsO4YBJqLbzoKcLdXZhRa/L53PaVWt4cdwPayTx5RnNmWN2DtjFI84yMTRwijKEResAeiloYFd1ha0IhQJtAqu26wXLI1Oz1HxQkHx/Rimd5JWiahYevssOcNHKNM9Y0Oj6OqmPcj2TY/0wIDAQABAoGAZEq914hiqLjL1PJnSAXaD/ybgsnbgWdfoeJ1DUJEE2Ofmu+pZkkXiCWxK+WKJu/Urh+5/ZX4GvtIEVC2x3Cp8SmAUm4w65cQPi/MX3Lb8feOyuTvcaohfSWLGm4OwQKFrFwVse9UOVO2ehfIDUyL924V8MZavs74vkYErUZXANECQQDyL01ko7Dpvu+hdnkvqfBB+ekgO1d6YgFb7m63JCF2w068CaSCY+K1v3uPa5BSLgOVAM2tVT/tsp/QUwrukB/dAkEAuAcNHKLSsGIhxI+kJ0YDrtBZTaeeCq/0gxo3a8ZEqUdfEVrQgFIh6b58JyM6EahssOSd+7iQxF0XbnNjqRq7bwJAAR+XDFB2EZ+BHQ6foUj4hFXUbwHXdgneV77TZKYWQabGRrkEulYcRxuMRy4IjVkJSzelvJgYo9GgTCcWdeTVQQJBAKpcbLj7ysvarKQIzdBFspcc7e9Dor0GEvdjR7cP/vQuzEWGqsqAPkDjRI/+vn0mTCieG9qyC+Kcw1pOnA4qXyUCQQDKb42+SFqE0jbTYARapptJHDh2QpPRSU6AW0HghxPIaWMeQswtDxsTwR0AQdy9G7q/R0r0IUlZicWrBcLtVz0u'
 
