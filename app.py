@@ -11,6 +11,9 @@ def encrypt(message, pub_key):
 def decrypt(ciphertext, priv_key):
     cipher = PKCS1_OAEP.new(priv_key)
     return cipher.decrypt(ciphertext)
+@app.route('/')
+def helloworld():
+    return "Helloworld"
 
 @app.route('/encrypt')
 def encrypt():
