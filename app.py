@@ -10,6 +10,7 @@ from base64 import b64decode,b64encode
 
 
 @app.route('/')
+@cross_origin()
 def helloworld():
     return "Helloworld"
 
@@ -23,6 +24,7 @@ def decrypt(ciphertext, priv_key):
 
 
 @app.route('/encrypt')
+@cross_origin()
 def encryption():
 
     pubkey=request.args.get('publickey')
@@ -39,6 +41,7 @@ def encryption():
     return encrypted
 
 @app.route('/decrypt')
+@cross_origin()
 def decryption():
     privateKey=request.args.get('privatekey')
     print(privateKey)
