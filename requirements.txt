@@ -1,6 +1,7 @@
 # Base packages:
 cryptography==2.5
 pycrypto==2.6.1
+flask-cors==3.0.7
 # Flask
 # gunicorn
 click==6.7
